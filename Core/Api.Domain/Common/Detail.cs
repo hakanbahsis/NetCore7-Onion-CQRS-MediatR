@@ -1,11 +1,4 @@
-﻿using Api.Domain.Common.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Api.Domain.Common;
+﻿namespace Api.Domain.Common;
 public class Detail : EntityBase
 {
     public Detail()

@@ -1,6 +1,4 @@
-﻿using Api.Domain.Common.Base;
-
-namespace Api.Domain.Common;
+﻿namespace Api.Domain.Common;
 public class Product : EntityBase
 {
     public Product()
@@ -22,7 +20,7 @@ public class Product : EntityBase
     public required int BrandId { get; set; }
     public required decimal Price { get; set; }
     public required decimal Discount { get; set; }
-    public required Brand Brand { get; set; }
+    public  Brand Brand { get; set; }
     public ICollection<Category> Categories { get; set; }
 }
 

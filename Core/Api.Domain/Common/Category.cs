@@ -1,6 +1,4 @@
-﻿using Api.Domain.Common.Base;
-
-namespace Api.Domain.Common;
+﻿namespace Api.Domain.Common;
 
 public class Category:EntityBase
 {
