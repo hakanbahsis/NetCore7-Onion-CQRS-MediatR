@@ -14,7 +14,7 @@ public class BrandConfigurations : IEntityTypeConfiguration<Brand>
         //        Name = faker.Commerce.Department()
         //    });
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 1; i < 4; i++)
         {
             builder.HasData(
                 new Brand
