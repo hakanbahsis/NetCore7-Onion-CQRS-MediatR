@@ -1,9 +1,9 @@
 ﻿namespace Api.Persistance.Repositories;
 public class WriteRepository<T> : IWriteRepository<T> where T : class, IEntityBase, new()
 {
-    private readonly AppDbContext _context;
+    private readonly DbContext _context;
 
-    public WriteRepository(AppDbContext context)
+    public WriteRepository(DbContext context)
     {
         _context = context;
     }

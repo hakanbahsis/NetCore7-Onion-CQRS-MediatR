@@ -1,14 +1,10 @@
-﻿
-
-
-
-namespace Api.Persistance.Repositories;
+﻿namespace Api.Persistance.Repositories;
 public class ReadRepository<T> : IReadRepository<T> where T : class, IEntityBase, new()
 {
-    //public AppDbContext Context { get; set; }
-    private readonly AppDbContext _context;
+    //public DbContext Context { get; set; }
+    private readonly DbContext _context;
 
-    public ReadRepository(AppDbContext context)
+    public ReadRepository(DbContext context)
     {
         _context = context;
     }
