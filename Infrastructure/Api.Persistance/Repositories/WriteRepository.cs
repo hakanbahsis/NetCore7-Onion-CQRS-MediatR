@@ -22,13 +22,13 @@ public class WriteRepository<T> : IWriteRepository<T> where T : class, IEntityBa
 
     public async Task<T> UpdateAsync(T entity)
     {
-        await Task.Run(()=>Table.Update(entity));
+        await Task.Run(() => Table.Update(entity));
         return entity;
     }
 
     public async Task HardDeleteAsync(T entity)
     {
-        await Task.Run(()=>Table.Remove(entity));
+        await Task.Run(() => Table.Remove(entity));
     }
 
     public Task SoftDeleteAsync(T entity)
@@ -36,6 +36,5 @@ public class WriteRepository<T> : IWriteRepository<T> where T : class, IEntityBa
         throw new NotImplementedException();
     }
 
-    
-}
 
+}
