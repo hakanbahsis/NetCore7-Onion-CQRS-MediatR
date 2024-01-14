@@ -1,4 +1,5 @@
 using Api.Persistance;
+using Api.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,9 @@ builder.Configuration.SetBasePath(env.ContentRootPath)
 
 //Add PersistanceRegistraton
 builder.Services.AddPersistance(builder.Configuration);
+
+//Add ApplicationRegistration
+builder.Services.AddApplication();
 
 var app = builder.Build();
 

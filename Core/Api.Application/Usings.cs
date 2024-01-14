@@ -2,6 +2,11 @@
 global using System.Collections.Generic;
 global using System.Linq;
 global using System.Text;
+global using MediatR;
 global using System.Threading.Tasks;
 global using Api.Domain.Common.Base;
 global using Api.Application.Interfaces.Repositories;
+global using Api.Application.Interfaces.UnitOfWorks;
+global using Api.Domain.Common;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Reflection;
