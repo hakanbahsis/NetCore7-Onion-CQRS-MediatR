@@ -9,6 +9,6 @@ public class Brand : EntityBase
     {
         Name=name;
     }
-    public required string Name { get; set; }
+    public  string Name { get; set; }
 }
 
