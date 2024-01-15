@@ -42,10 +42,12 @@ public class ReadRepository<T> : IReadRepository<T> where T : class, IEntityBase
         Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null, bool enableTracking = false)
     {
         IQueryable<T> query = Table;
-        if (!enableTracking) query = query.AsNoTracking();
-        if (include is not null) query = include(query);
-        query.Where(predicate);
-        return await query.FirstOrDefaultAsync();
+        if (!enableTracking)
+            query = query.AsNoTracking();
+        if (include is not null)
+            query = include(query);
+
+        return await query.FirstOrDefaultAsync(predicate);
     }
 
     public async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)
