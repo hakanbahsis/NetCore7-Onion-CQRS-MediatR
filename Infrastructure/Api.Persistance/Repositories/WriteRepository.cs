@@ -29,12 +29,16 @@ public class WriteRepository<T> : IWriteRepository<T> where T : class, IEntityBa
     public async Task HardDeleteAsync(T entity)
     {
         await Task.Run(() => Table.Remove(entity));
-    }
+    } 
+
 
     public Task SoftDeleteAsync(T entity)
     {
         throw new NotImplementedException();
     }
 
-
+    public async Task HardDeleteRangeAsync(IList<T> entity)
+    {
+        await Task.Run(() => Table.RemoveRange(entity));
+    }
 }

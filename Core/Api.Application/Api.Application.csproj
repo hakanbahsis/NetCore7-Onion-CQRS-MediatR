@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Products\Command\" />
     <Folder Include="Features\Products\Queries\GetProducts\" />
   </ItemGroup>
 
