@@ -10,3 +10,5 @@ global using Api.Application.Interfaces.UnitOfWorks;
 global using Api.Domain.Common;
 global using Microsoft.Extensions.DependencyInjection;
 global using System.Reflection;
+global using Api.Application.DTOs.Brand;
+global using Api.Application.Interfaces.AutoMapper;
