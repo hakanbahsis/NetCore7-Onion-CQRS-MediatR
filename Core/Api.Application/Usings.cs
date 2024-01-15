@@ -8,7 +8,6 @@ global using Microsoft.AspNetCore.Http;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.AspNetCore.Builder;
 global using SendGrid.Helpers.Errors.Model;
-global using System.ComponentModel.DataAnnotations;
 global using Api.Domain.Common.Base;
 global using Api.Application.Interfaces.Repositories;
 global using Api.Application.Interfaces.UnitOfWorks;
@@ -17,3 +16,7 @@ global using System.Reflection;
 global using Api.Application.DTOs.Brand;
 global using Api.Application.Interfaces.AutoMapper;
 global using Api.Application.Exceptions;
+global using FluentValidation;
+global using Api.Application.Beheviors;
+global using System.Globalization;
+

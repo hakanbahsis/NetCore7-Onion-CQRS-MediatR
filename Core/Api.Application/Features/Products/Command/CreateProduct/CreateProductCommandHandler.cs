@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Api.Application.Features.Products.Command.CreateProduct;
-public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest>
+﻿namespace Api.Application.Features.Products.Command.CreateProduct;
+public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest,Unit>
 {
     private readonly IUnitOfWork _unitOfWork;
 
@@ -14,7 +8,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandR
         _unitOfWork = unitOfWork;
     }
 
-    public async Task Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
     {
         Product product = new(request.Title,request.Description, request.BrandId, request.Price,request.Discount);
         
@@ -32,5 +26,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandR
             }
             await _unitOfWork.SaveAsync();
         }
+
+        return Unit.Value;
     }
 }

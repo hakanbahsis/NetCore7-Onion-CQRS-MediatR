@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Api.Application.Features.Products.Command.CreateProduct;
-public class CreateProductCommandRequest:IRequest
+﻿namespace Api.Application.Features.Products.Command.CreateProduct;
+public class CreateProductCommandRequest:IRequest<Unit>
 {
     public string Title { get; set; }
     public string Description { get; set; }
