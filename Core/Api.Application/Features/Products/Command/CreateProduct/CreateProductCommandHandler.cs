@@ -10,7 +10,6 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandR
     {
         _unitOfWork = unitOfWork;
         _productRules = productRules;
-
     }
 
     public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
