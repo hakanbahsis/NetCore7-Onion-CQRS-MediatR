@@ -19,4 +19,4 @@ global using Api.Application.Exceptions;
 global using FluentValidation;
 global using Api.Application.Beheviors;
 global using System.Globalization;
-
+global using System.IdentityModel.Tokens.Jwt;

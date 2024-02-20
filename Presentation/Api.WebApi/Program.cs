@@ -1,5 +1,6 @@
 using Api.Persistance;
 using Api.Application;
+using Api.Infrastructure;
 using Api.Mapper;
 using Api.Application.Exceptions;
 
@@ -26,6 +27,9 @@ builder.Services.AddApplication();
 
 //Add CustomMapperRegistration
 builder.Services.AddCustomMapper();
+
+//Add InfrastructureRegistration
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
