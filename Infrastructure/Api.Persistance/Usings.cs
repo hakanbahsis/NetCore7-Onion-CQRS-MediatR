@@ -18,3 +18,4 @@ global using Api.Persistance.Context;
 global using Api.Persistance.Repositories;
 global using Api.Application.Interfaces.UnitOfWorks;
 global using Api.Persistance.UnitOfWorks;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;

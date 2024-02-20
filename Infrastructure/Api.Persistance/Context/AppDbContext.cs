@@ -1,5 +1,5 @@
 ﻿namespace Api.Persistance.Context;
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<User,Role,Guid>
 {
     public AppDbContext(){ }
 
